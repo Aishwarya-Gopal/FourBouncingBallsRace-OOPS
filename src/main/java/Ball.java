@@ -3,7 +3,7 @@ public class Ball {
     public int GREEN;
     public int BLUE;
     public int x_position;
-    public double y_position;
+    public int y_position;
     public int radius;
     public int velocity;
 
@@ -12,7 +12,7 @@ public class Ball {
         this.GREEN = GREEN;
         this.BLUE = BLUE;
         this.x_position = x_position;
-        this.y_position = 0;
+        this.y_position = y_position;
         this.radius = radius;
         this.velocity = velocity;
     }

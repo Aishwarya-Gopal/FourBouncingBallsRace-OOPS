@@ -18,11 +18,6 @@ public class BouncingBallRace extends PApplet {
 
     @Override
     public void setup() {
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         background(sketch.BACKGROUND_COLOR);
         ballOne = new Ball(235, 52, 52, 0, sketch.HEIGHT / 5, 25, 1);
         ballTwo = new Ball(79, 255, 56, 0, (sketch.HEIGHT * 2) / 5, 25, 2);

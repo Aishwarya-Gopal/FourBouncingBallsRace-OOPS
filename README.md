@@ -1,6 +1,6 @@
 ## The Race of Four Bouncing Balls !
 
-Concepts implemented:
+Concepts implemented / Tools used:
 * Object Oriented Programming
 * Processing - creative coding
 * Java

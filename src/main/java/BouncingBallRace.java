@@ -2,7 +2,7 @@ import processing.core.PApplet;
 
 public class BouncingBallRace extends PApplet {
     Sketch sketch;
-    Ball ballOne, ballTwo, ballThree;
+    Ball ballOne, ballTwo, ballThree, ballFour;
 
     public static void main(String[] args) {
         PApplet.main("BouncingBallRace", args);
@@ -21,6 +21,7 @@ public class BouncingBallRace extends PApplet {
         ballOne = new Ball(235, 52, 52, 0, sketch.HEIGHT / 5, 25, 1);
         ballTwo = new Ball(79, 255, 56, 0, (sketch.HEIGHT * 2) / 5, 25, 2);
         ballThree = new Ball(56, 232, 255, 0, (sketch.HEIGHT * 3) / 5, 25, 3);
+        ballFour = new Ball(183, 89, 255, 0, (sketch.HEIGHT * 4) / 5, 25, 4);
     }
 
     @Override
@@ -28,6 +29,7 @@ public class BouncingBallRace extends PApplet {
         setColorAndMove(ballOne);
         setColorAndMove(ballTwo);
         setColorAndMove(ballThree);
+        setColorAndMove(ballFour);
     }
 
     public void setColorAndMove(Ball ball) {

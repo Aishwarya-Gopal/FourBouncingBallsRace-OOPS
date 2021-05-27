@@ -26,10 +26,13 @@ public class BouncingBallRace extends PApplet {
 
     @Override
     public void draw() {
-        setColorAndMove(ballOne);
-        setColorAndMove(ballTwo);
-        setColorAndMove(ballThree);
-        setColorAndMove(ballFour);
+        if (!isGameOver()) {
+            setColorAndMove(ballOne);
+            setColorAndMove(ballTwo);
+            setColorAndMove(ballThree);
+            setColorAndMove(ballFour);
+        } else
+            exit();
     }
 
     public void setColorAndMove(Ball ball) {
@@ -38,4 +41,7 @@ public class BouncingBallRace extends PApplet {
         ball.moveTheBall();
     }
 
+    private Boolean isGameOver() {
+        return ballOne.x_position > sketch.WIDTH;
+    }
 }

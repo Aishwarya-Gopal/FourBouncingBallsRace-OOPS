@@ -26,6 +26,7 @@ public class BouncingBallRace extends PApplet {
 
     @Override
     public void draw() {
+        background(sketch.BACKGROUND_COLOR);
         if (!isGameOver()) {
             setColorAndMove(ballOne);
             setColorAndMove(ballTwo);

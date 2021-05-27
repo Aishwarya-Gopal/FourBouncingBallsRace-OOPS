@@ -24,12 +24,14 @@ public class BouncingBallRace extends PApplet {
 
     @Override
     public void draw() {
-        fill(ballOne.RED, ballOne.GREEN, ballOne.BLUE);
-        ellipse(ballOne.x_position, ballOne.y_position, ballOne.radius, ballOne.radius);
-        ballOne.moveTheBall();
-
-        fill(ballTwo.RED, ballTwo.GREEN, ballTwo.BLUE);
-        ellipse(ballTwo.x_position, ballTwo.y_position, ballTwo.radius, ballTwo.radius);
-        ballTwo.moveTheBall();
+        bounceAndMove(ballOne);
+        bounceAndMove(ballTwo);
     }
+
+    public void bounceAndMove(Ball ball) {
+        fill(ball.RED, ball.GREEN, ball.BLUE);
+        ellipse(ball.x_position, (float) ball.y_position, ball.radius, ball.radius);
+        ball.moveTheBall();
+    }
+
 }

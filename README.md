@@ -1,9 +1,16 @@
 ## The Race of Four Bouncing Balls !
 
+Concepts implemented:
+* Object Oriented Programming
+* Processing - creative coding
+* Java
+* Markdown
+* Gradle
+* Git
+* Intellij ide
+
 ____________________________
 
 ## ```Three! Two! One !```
 
-[![Watch the video](https://github.com/aishwarya-g-thoughtworks/FourBouncingBallsRace-OOPS/blob/main/images/poster.png)](https://github.com/aishwarya-g-thoughtworks/FourBouncingBallsRace-OOPS/blob/main/video/BouncingBallRace.mp4)
-
-____________________________
+[![Watch the balls roll out](images/poster.png)](video/BouncingBallRace.mp4)

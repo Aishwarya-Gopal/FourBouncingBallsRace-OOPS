@@ -27,20 +27,20 @@ public class BouncingBallRace extends PApplet {
     @Override
     public void setup() {
         setBlackBackground();
-        ballOne = new Ball(red, 0, setYCoor(1), 25, 1);
-        ballTwo = new Ball(green, 0, setYCoor(2), 25, 2);
-        ballThree = new Ball(blue, 0, setYCoor(3), 25, 3);
-        ballFour = new Ball(violet, 0, setYCoor(4), 25, 4);
+        ballOne = new Ball(red, 0, setYCoor(1), 25, 1, this);
+        ballTwo = new Ball(green, 0, setYCoor(2), 25, 2, this);
+        ballThree = new Ball(blue, 0, setYCoor(3), 25, 3, this);
+        ballFour = new Ball(violet, 0, setYCoor(4), 25, 4, this);
     }
 
     @Override
     public void draw() {
         setBlackBackground();
         if (!isGameOver()) {
-            setColorAndMove(ballOne);
-            setColorAndMove(ballTwo);
-            setColorAndMove(ballThree);
-            setColorAndMove(ballFour);
+            ballOne.setColorAndMove();
+            ballTwo.setColorAndMove();
+            ballThree.setColorAndMove();
+            ballFour.setColorAndMove();
         } else
             exit();
     }
@@ -49,14 +49,8 @@ public class BouncingBallRace extends PApplet {
         background(sketch.getBACKGROUND_COLOR());
     }
 
-    public void setColorAndMove(Ball ball) {
-        fill(ball.color.getRed(), ball.color.getGreen(), ball.color.getBlue());
-        ellipse(ball.x_position, (float) ball.y_position, ball.radius, ball.radius);
-        ball.moveTheBall();
-    }
-
     private Boolean isGameOver() {
-        return ballOne.x_position > sketch.getWIDTH();
+        return ballOne.getX_position() > sketch.getWIDTH();
     }
 
     private int setYCoor(int ballNo) {

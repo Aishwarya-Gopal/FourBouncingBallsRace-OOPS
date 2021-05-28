@@ -21,7 +21,7 @@ public class BouncingBallRace extends PApplet {
         violet = new Color(183, 89, 255);
 
         sketch = new Sketch(640, 480, black);
-        size(sketch.WIDTH, sketch.HEIGHT);
+        size(sketch.getWIDTH(), sketch.getHEIGHT());
     }
 
     @Override
@@ -46,7 +46,7 @@ public class BouncingBallRace extends PApplet {
     }
 
     private void setBlackBackground() {
-        background(sketch.BACKGROUND_COLOR.getRGB());
+        background(sketch.getBACKGROUND_COLOR());
     }
 
     public void setColorAndMove(Ball ball) {
@@ -56,11 +56,11 @@ public class BouncingBallRace extends PApplet {
     }
 
     private Boolean isGameOver() {
-        return ballOne.x_position > sketch.WIDTH;
+        return ballOne.x_position > sketch.getWIDTH();
     }
 
     private int setYCoor(int ballNo) {
-        return (int) ((sketch.HEIGHT * ballNo) / 5.0);
+        return (int) ((sketch.getHEIGHT() * ballNo) / 5.0);
     }
 
 }

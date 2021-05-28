@@ -20,13 +20,13 @@ public class BouncingBallRace extends PApplet {
         blue = new Color(56, 232, 255);
         violet = new Color(183, 89, 255);
 
-        sketch = new Sketch(640, 480, black);
+        sketch = new Sketch(640, 480, black, this);
         size(sketch.getWIDTH(), sketch.getHEIGHT());
     }
 
     @Override
     public void setup() {
-        setBlackBackground();
+        sketch.setBlackBackground();
         ballOne = new Ball(red, 0, setYCoor(1), 25, 1, this);
         ballTwo = new Ball(green, 0, setYCoor(2), 25, 2, this);
         ballThree = new Ball(blue, 0, setYCoor(3), 25, 3, this);
@@ -35,7 +35,7 @@ public class BouncingBallRace extends PApplet {
 
     @Override
     public void draw() {
-        setBlackBackground();
+        sketch.setBlackBackground();
         if (!isGameOver()) {
             ballOne.setColorAndMove();
             ballTwo.setColorAndMove();
@@ -43,10 +43,6 @@ public class BouncingBallRace extends PApplet {
             ballFour.setColorAndMove();
         } else
             exit();
-    }
-
-    private void setBlackBackground() {
-        background(sketch.getBACKGROUND_COLOR());
     }
 
     private Boolean isGameOver() {

@@ -1,14 +1,18 @@
+import processing.core.PApplet;
+
 import java.awt.*;
 
 public class Sketch {
     private final int WIDTH;
     private final int HEIGHT;
     private final Color BACKGROUND_COLOR;
+    private PApplet p;
 
-    public Sketch(int width, int height, Color backgroundColor) {
+    public Sketch(int width, int height, Color backgroundColor, PApplet _p) {
         this.WIDTH = width;
         this.HEIGHT = height;
         this.BACKGROUND_COLOR = backgroundColor;
+        p = _p;
     }
 
     public int getWIDTH() {
@@ -19,7 +23,7 @@ public class Sketch {
         return HEIGHT;
     }
 
-    public int getBACKGROUND_COLOR() {
-        return BACKGROUND_COLOR.getRGB();
+    public void setBlackBackground() {
+        p.background(this.BACKGROUND_COLOR.getRGB());
     }
 }

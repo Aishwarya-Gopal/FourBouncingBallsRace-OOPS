@@ -1,9 +1,12 @@
 import processing.core.PApplet;
 
+import java.awt.*;
+
 public class BouncingBallRace extends PApplet {
 
     Sketch sketch;
     Ball ballOne, ballTwo, ballThree, ballFour;
+    Color black, red, green, blue, violet;
 
     public static void main(String[] args) {
         PApplet.main("BouncingBallRace", args);
@@ -12,17 +15,23 @@ public class BouncingBallRace extends PApplet {
     @Override
     public void settings() {
         super.settings();
-        sketch = new Sketch(640, 480, 0);
+        black = new Color(0);
+        red = new Color(235, 52, 52);
+        green = new Color(79, 255, 56);
+        blue = new Color(56, 232, 255);
+        violet = new Color(183, 89, 255);
+
+        sketch = new Sketch(640, 480, black);
         size(sketch.WIDTH, sketch.HEIGHT);
     }
 
     @Override
     public void setup() {
         setBlackBackground();
-        ballOne = new Ball(235, 52, 52, 0, setYCoor(1), 25, 1);
-        ballTwo = new Ball(79, 255, 56, 0, setYCoor(2), 25, 2);
-        ballThree = new Ball(56, 232, 255, 0, setYCoor(3), 25, 3);
-        ballFour = new Ball(183, 89, 255, 0, setYCoor(4), 25, 4);
+        ballOne = new Ball(red, 0, setYCoor(1), 25, 1);
+        ballTwo = new Ball(green, 0, setYCoor(2), 25, 2);
+        ballThree = new Ball(blue, 0, setYCoor(3), 25, 3);
+        ballFour = new Ball(violet, 0, setYCoor(4), 25, 4);
     }
 
     @Override
@@ -38,11 +47,11 @@ public class BouncingBallRace extends PApplet {
     }
 
     private void setBlackBackground() {
-        background(sketch.BACKGROUND_COLOR);
+        background(sketch.BACKGROUND_COLOR.getRGB());
     }
 
     public void setColorAndMove(Ball ball) {
-        fill(ball.RED, ball.GREEN, ball.BLUE);
+        fill(ball.color.getRed(), ball.color.getGreen(), ball.color.getBlue());
         ellipse(ball.x_position, (float) ball.y_position, ball.radius, ball.radius);
         ball.moveTheBall();
     }

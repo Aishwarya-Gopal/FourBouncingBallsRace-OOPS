@@ -1,6 +1,6 @@
 import processing.core.PApplet;
 
-import java.awt.*;
+import java.awt.Color;
 
 public class BouncingBallRace extends PApplet {
 

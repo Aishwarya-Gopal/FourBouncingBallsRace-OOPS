@@ -19,10 +19,10 @@ public class BouncingBallRace extends PApplet {
     @Override
     public void setup() {
         setBlackBackground();
-        ballOne = new Ball(235, 52, 52, 0, sketch.HEIGHT / 5, 25, 1);
-        ballTwo = new Ball(79, 255, 56, 0, (sketch.HEIGHT * 2) / 5, 25, 2);
-        ballThree = new Ball(56, 232, 255, 0, (sketch.HEIGHT * 3) / 5, 25, 3);
-        ballFour = new Ball(183, 89, 255, 0, (sketch.HEIGHT * 4) / 5, 25, 4);
+        ballOne = new Ball(235, 52, 52, 0, setYCoor(1), 25, 1);
+        ballTwo = new Ball(79, 255, 56, 0, setYCoor(2), 25, 2);
+        ballThree = new Ball(56, 232, 255, 0, setYCoor(3), 25, 3);
+        ballFour = new Ball(183, 89, 255, 0, setYCoor(4), 25, 4);
     }
 
     @Override
@@ -50,4 +50,9 @@ public class BouncingBallRace extends PApplet {
     private Boolean isGameOver() {
         return ballOne.x_position > sketch.WIDTH;
     }
+
+    private int setYCoor(int ballNo) {
+        return (int) ((sketch.HEIGHT * ballNo) / 5.0);
+    }
+
 }

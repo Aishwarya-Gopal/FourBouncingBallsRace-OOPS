@@ -14,7 +14,6 @@ public class BouncingBallRace extends PApplet {
 
     @Override
     public void settings() {
-        super.settings();
         black = new Color(0);
         red = new Color(235, 52, 52);
         green = new Color(79, 255, 56);

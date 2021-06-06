@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class BouncingBallRace extends PApplet {
+public class FourBallsRace extends PApplet {
 
     public static final double SKETCH_SPLIT_THRESHOLD = 5.0;
     Sketch sketch;
@@ -13,7 +13,7 @@ public class BouncingBallRace extends PApplet {
     ArrayList<Ball> balls = new ArrayList<>();
 
     public static void main(String[] args) {
-        PApplet.main("BouncingBallRace", args);
+        PApplet.main("FourBallsRace", args);
     }
 
     @Override

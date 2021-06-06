@@ -2,9 +2,6 @@ import processing.core.PApplet;
 
 import java.awt.Color;
 
-import static processing.core.PApplet.sin;
-import static processing.core.PConstants.TWO_PI;
-
 public class Ball {
 
     public static final int X_START_POSITION = 0;

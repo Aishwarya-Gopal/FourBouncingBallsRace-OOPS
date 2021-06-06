@@ -31,10 +31,10 @@ public class BouncingBallRace extends PApplet {
     @Override
     public void setup() {
         sketch.setBlackBackground();
-        ballOne = new Ball(red, calculateYCoor(1), 25, 1, this);
-        ballTwo = new Ball(green, calculateYCoor(2), 25, 2, this);
-        ballThree = new Ball(blue, calculateYCoor(3), 25, 3, this);
-        ballFour = new Ball(violet, calculateYCoor(4), 25, 4, this);
+        ballOne = new Ball(red, calculateYCoord(1), 25, 1, this);
+        ballTwo = new Ball(green, calculateYCoord(2), 25, 2, this);
+        ballThree = new Ball(blue, calculateYCoord(3), 25, 3, this);
+        ballFour = new Ball(violet, calculateYCoord(4), 25, 4, this);
         Collections.addAll(balls, ballOne, ballTwo, ballThree, ballFour);
     }
 
@@ -50,7 +50,7 @@ public class BouncingBallRace extends PApplet {
         return ballOne.getX_position() > sketch.getWIDTH();
     }
 
-    private int calculateYCoor(int ballNo) {
+    private int calculateYCoord(int ballNo) {
         return (int) ((sketch.getHEIGHT() * ballNo) / SKETCH_SPLIT_THRESHOLD);
     }
 

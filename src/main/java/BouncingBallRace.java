@@ -6,6 +6,7 @@ import java.util.Collections;
 
 public class BouncingBallRace extends PApplet {
 
+    public static final double SKETCH_SPLIT_THRESHOLD = 5.0;
     Sketch sketch;
     Ball ballOne, ballTwo, ballThree, ballFour;
     Color black, red, green, blue, violet;
@@ -30,10 +31,10 @@ public class BouncingBallRace extends PApplet {
     @Override
     public void setup() {
         sketch.setBlackBackground();
-        ballOne = new Ball(red, 0, setYCoor(1), 25, 1, this);
-        ballTwo = new Ball(green, 0, setYCoor(2), 25, 2, this);
-        ballThree = new Ball(blue, 0, setYCoor(3), 25, 3, this);
-        ballFour = new Ball(violet, 0, setYCoor(4), 25, 4, this);
+        ballOne = new Ball(red, setYCoor(1), 25, 1, this);
+        ballTwo = new Ball(green, setYCoor(2), 25, 2, this);
+        ballThree = new Ball(blue, setYCoor(3), 25, 3, this);
+        ballFour = new Ball(violet, setYCoor(4), 25, 4, this);
         Collections.addAll(balls, ballOne, ballTwo, ballThree, ballFour);
     }
 
@@ -50,7 +51,7 @@ public class BouncingBallRace extends PApplet {
     }
 
     private int setYCoor(int ballNo) {
-        return (int) ((sketch.getHEIGHT() * ballNo) / 5.0);
+        return (int) ((sketch.getHEIGHT() * ballNo) / SKETCH_SPLIT_THRESHOLD);
     }
 
 }

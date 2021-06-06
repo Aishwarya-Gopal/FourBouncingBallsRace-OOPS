@@ -7,6 +7,7 @@ import static processing.core.PConstants.TWO_PI;
 
 public class Ball {
 
+    public static final int X_START_POSITION = 0;
     private final PApplet P;
     private final Color COLOR;
     private final int RADIUS;
@@ -15,9 +16,9 @@ public class Ball {
     private int x_position;
     private final double y_position;
 
-    public Ball(Color color, int x_position, int y_position, int radius, int velocity, PApplet _p) {
+    public Ball(Color color, int y_position, int radius, int velocity, PApplet _p) {
         this.COLOR = color;
-        this.x_position = x_position;
+        this.x_position = X_START_POSITION;
         this.y_position = y_position;
         this.RADIUS = radius;
         this.VELOCITY = velocity;

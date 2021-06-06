@@ -11,20 +11,16 @@ public class Ball {
     private final Color COLOR;
     private final int RADIUS;
     private final int VELOCITY;
-    private final double Y_POSITION;
 
     private int x_position;
-    private double y_position;
-    private double amplitude;
+    private final double y_position;
 
     public Ball(Color color, int x_position, int y_position, int radius, int velocity, PApplet _p) {
         this.COLOR = color;
         this.x_position = x_position;
-        this.y_position = 0;
+        this.y_position = y_position;
         this.RADIUS = radius;
         this.VELOCITY = velocity;
-        this.Y_POSITION = y_position;
-        amplitude = 0.1F;
         P = _p;
     }
 
@@ -36,9 +32,6 @@ public class Ball {
 
     private void moveTheBall() {
         this.x_position += this.VELOCITY;
-        this.y_position = this.Y_POSITION + sin((float) amplitude) * 40.0;
-        double INC = TWO_PI / 50.0;
-        amplitude = amplitude + INC;
     }
 
     public int getX_position() {

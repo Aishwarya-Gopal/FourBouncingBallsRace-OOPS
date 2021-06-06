@@ -11,10 +11,9 @@ Concepts implemented / Tools used:
 
 ____________________________
 
-[Secret: The ball does not only move in straight line, look into the demo video.. shh]
 ##  ```Three! Two! One !```
 
-[![Watch the balls roll out](images/poster.png)](video/BouncingBallRace.mp4)
+![Watch the balls roll out](images/FourBalls.png)
 
 
 ___________________________
